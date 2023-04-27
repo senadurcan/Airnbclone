@@ -599,6 +599,11 @@ width: auto;	margin: 0 auto;
     cursor: pointer;
   }
 
+  .sekmeler .item a{
+    text-decoration: none;
+    color: #393939;
+  }
+
   .main-container .d-flex .sekmeler .item hr {
     width: 60%;
     margin: auto;
