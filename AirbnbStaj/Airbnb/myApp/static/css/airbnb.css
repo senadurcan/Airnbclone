@@ -599,6 +599,11 @@ width: auto;	margin: 0 auto;
     cursor: pointer;
   }
 
+  .sekmeler .item a{
+    text-decoration: none;
+    color: #393939;
+  }
+
   .main-container .d-flex .sekmeler .item hr {
     width: 60%;
     margin: auto;
@@ -1250,7 +1255,10 @@ ul {
 /* HOST SAYFASI */
 .host-buttons {
   text-align: center;
-  
+}
+
+.host-buttons a{
+  margin-right: 10px;
 }
 
 .hostBtn-hover {
@@ -1287,11 +1295,10 @@ ul {
 .hostBtn-hover.color-11 {
   background-image:radial-gradient( circle at center, #FF385C 0%,#e61e4d 27.5%,#e31c5f 40%,#d70466 57.5%,#bd1e59 75%,#bd1e59 100% );
 }
- 
+
 .button{
   display: inline-block;
   padding: 13px 12px !important;
-  margin-left: 10px;
 }
 .button2:hover{
 background-color: gray;
@@ -1313,8 +1320,129 @@ background-color: gray;
 }
 
 #my-icon-host {
-  font-size: 35px;
+  font-size: 35px;
 }
+
+.son{
+  background-color: #f7f7f7;
+  margin-top: 50px;
+  text-align: start;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+}
+
+.soru{
+  
+  background-color: #f7f7f7;
+  text-align: start;
+  justify-content: center;
+  align-items: center;
+  padding-right: 200px;
+  padding-left: 300px;
+  padding-top: 100px;
+}
+
+.accordion-button{
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+.accordion-header, .accordion-button, .accordion-collapse {
+  background-color: transparent !important;
+  border: none !important;
+}
+.accordion-button:focus{
+  border: none !important;
+}
+.accordion-item{
+  background-color: transparent;
+  border: none;
+}
+
+.slider-container{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.value-container{
+  margin-bottom: 25px;
+}
+
+#demo{
+  color: #000000;
+  font-size: 70px;
+}
+
+.slider{
+  width: 50%;
+  background: linear-gradient(to right, #838383 0%, #838383 0%, #838383 0%, #838383 100%);
+  height: 5px;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px -3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 2px -3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 2px -3px rgba(0, 0, 0, 0.1);
+
+}
+
+.slider::-webkit-slider-thumb{
+  cursor: pointer;
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  background-color: #000000;
+  border-radius: 30%;
+  border: 7px solid black;
+  box-shadow: 2px 2px 2px -3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 2px 2px 2px -3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 2px -3px rgba(0, 0, 0, 0.1);
+
+}
+.map{
+  width: 100%;
+  height: 100px;
+  border-radius: 60px;
+}
+
+.host-search-bar{
+  background: var(--color-light);
+  padding: var(--search-padding);
+  border: 1px solid grey;
+  padding: 8px;
+
+}
+.host-search-bar i {
+  padding: 5px;
+  color: #FF385C;
+  width: 40px;
+  
+} 
+.host-search-bar input[type="search"] {
+  background: transparent;
+  width: 10vw;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+}
+.host-input{
+  text-align: left;
+  justify-content: left;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 768px){
+  .host-navbar{
+    display: none !important;
+  }
+}
+
+/* HOST SAYFASI BİTİS */
 
 /* ----------PROFİL-SAYFASI-CSS------------- */
 

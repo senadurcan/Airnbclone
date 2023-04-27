@@ -65,7 +65,7 @@
                     {% for kategori in kategoriler %}
                             <div class="item">
                                 <h6><i class="{{ kategori.icon }}"></i></h6>
-                                <a style="font-size: 10px;">{{ kategori.isim }}</a>
+                                <a href="{% url 'kategori' kategori.slug %}" style="font-size: 10px;">{{ kategori.isim }}</a>
                                 <hr>
                             </div>
                     {% endfor %}
