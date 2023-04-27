@@ -1316,6 +1316,11 @@ background-color: gray;
 
 #my-icon-host {
   font-size: 35px;
+
+}
+#my-icon-hostt {
+  font-size: 35px;
+
 }
 
 .son{
@@ -1431,9 +1436,32 @@ background-color: gray;
   padding-left: 20px;
 }
 
+
+
 @media screen and (max-width: 768px){
   .host-navbar{
-    display: none !important;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 576px) {
+  .host-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .host-buttons a {
+    flex: 0 0 100%;
+    margin-top: 10px;
+  }
+
+  .host-buttons a.button1 {
+    display: none;
+  }
+
+  .host-buttons a.button2 {
+    margin-left: 10px;
   }
 }
 
