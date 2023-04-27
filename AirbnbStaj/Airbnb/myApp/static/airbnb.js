@@ -119,5 +119,17 @@ for (var i = 0; i < prevBtns.length; i++) {
 }
 
 
+// ----------------------HOST-RANGE-SLİDER-------------------
+var output = document.getElementById("demo");
 
+var slider = document.getElementById("myRange").oninput = function (){
+
+  var value = (this.value-this.min)/(this.max-this.min)*100
+
+  this.style.background = 'linear-gradient (to right, #838383 0%, #838383' + value + '%, #838383' + value + '%, #838383 100%)'
+
+  output.innerHTML = this.value;
+
+
+}
 
