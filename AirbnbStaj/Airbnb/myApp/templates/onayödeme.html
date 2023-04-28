@@ -5,30 +5,32 @@
     <img class="navlogo p-4" src="{% static 'image/airbnb.png' %}" alt="dsf">
     <hr>
 </nav>
-<div class="onyödm">
-    <div class="geriikon d-flex mt-5 ">
-        <a href="{% url 'contact_host' %}" class="text-dark">
+<div class="container">
+    <div class=" d-flex mt-5 ">
+        <a href="{% url 'contact_host' %}" class="geriikon text-dark">
             <i class="fa-solid fa-angle-left fa-xl mt-3 "></i>
         </a>
         <h3 class="onaybaslik ms-4 fw-medium  ">Onay ve Ödeme</h3>
     </div>
     <div class="row">
-        <div class="col-6 me-4">
-            <div class="row">
-                <h4 class="mt-4">Seyahatiniz</h4>
-                <div class="d-flex justify-content-between mt-4">
-                    <h6 class="">Tarihler</h6>
-                    <a href="" class="duzenlee text-dark d-flex fw-bold">Düzenle</a>
+        <div class="col-6 me-4 solll">
+            <div class="seyahat"> 
+                <div class="row">
+                    <h4 class="mt-4">Seyahatiniz</h4>
+                    <div class="d-flex justify-content-between mt-4">
+                        <h6 class="">Tarihler</h6>
+                        <a href="" class="duzenlee text-dark d-flex fw-bold">Düzenle</a>
+                    </div>
+                    <p class="text-muted">23-28 Nis</p>
                 </div>
-                <p class="text-muted">23-28 Nis</p>
-            </div>
-            <div class="row">
-                <div class="d-flex justify-content-between">
-                    <h6 class="">Misafir</h6>
-                    <a href="" class="duzenlee text-dark d-flex fw-bold">Düzenle</a>
+                <div class="row">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="">Misafir</h6>
+                        <a href="" class="duzenlee text-dark d-flex fw-bold">Düzenle</a>
+                    </div>
+                    <p class="text-muted">1 Misafir</p>
+                    <hr>
                 </div>
-                <p class="text-muted">1 Misafir</p>
-                <hr>
             </div>
             <h4 class="mb-3">Nasıl ödeme yapacağınızı seçin</h4>
             <div class="odemeekran">
@@ -147,8 +149,8 @@
         </div>
         <div class="col-5 ms-5 mt-4">
             <div class="sagpanel">
-                <div class="p-3">
-                    <div class="d-flex">
+                <div class="sag-pnl p-3">
+                    <div class="sagg_icerik d-flex">
                         <img class="rounded-3 me-3 " src="{% static 'image/doga2.jpg' %}" width="130" height="120">
                         <div class="">
                             <small class="tkk text-secondary fw-normal">Tüm kiralık konut</small><br>
@@ -180,12 +182,41 @@
     </div>
 </div>
 <!-- Responsive -->
-<div class="onaynav">
-    <div class="gerikon d-flex mt-5 ">
-        <a href="{% url 'contact_host' %}" class="text-dark">
-            <i class="fa-solid fa-angle-left fa-xl mt-3 "></i>
+<div class="onaynav-res ">
+        <a href="{% url 'contact_host' %}" class="navgeri text-dark mt-3 ms-4">
+            <i class="fa-solid fa-angle-left fa-lg "></i>
         </a>
-        <h3 class="onaybaslik ms-4 fw-medium  ">Onay ve Ödeme</h3>
+        <div class="onay-res">
+            <h3 class="onay-resh3 fw-bold text-dark ">Onay ve Ödeme</h3>
+        </div>
+    </div>
+    <div class="sagg_icerik">
+        <img class="rounded-3 me-3 " src="{% static 'image/doga2.jpg' %}" width="130" height="120">
+    <div class="">
+        <small class="tkk text-secondary fw-normal">Tüm kiralık konut</small><br>
+        <small class="evacklm fw-light mt-2 d-block "><i class="fa-solid fa-language fa-sm  me-1" style="color: #545c69;"></i>Mykonos Divino 1 bd Deniz Manzaralı Villa - özel havuz</small><br>
+        <s class="dgr text-muted mt-2"><i class="fa-solid fa-star fa-xs me-1"></i><b class="text-dark">4,99</b>(178 değerlendirme)  <i class="fa-solid fa-medal fa-xs"></i> Süper Ev Sahibi</s>
+    </div>
+</div>
+<hr class="mt-4">
+<p>Rezervasyonunuz <s class="text-danger fw-bold">air</s><b>cover</b>  ile korunmaktadır</p>
+
+<div class="seyahat>"> 
+    <div class="row">
+        <h4 class="mt-4">Seyahatiniz</h4>
+        <div class="d-flex justify-content-between mt-4">
+            <h6 class="">Tarihler</h6>
+            <a href="" class="duzenlee text-dark d-flex fw-bold">Düzenle</a>
+        </div>
+        <p class="text-muted">23-28 Nis</p>
+    </div>
+    <div class="row">
+        <div class="d-flex justify-content-between">
+            <h6 class="">Misafir</h6>
+            <a href="" class="duzenlee text-dark d-flex fw-bold">Düzenle</a>
+        </div>
+        <p class="text-muted">1 Misafir</p>
+        <hr>
     </div>
 </div>
 {% endblock content %}

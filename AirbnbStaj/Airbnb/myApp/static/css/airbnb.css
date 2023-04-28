@@ -1711,22 +1711,47 @@ margin-right: 50px;
 .soll{
   margin: auto;
 }
+.solll{
+  margin: auto;
+}
 .bar-search, .i, .input{
   display: none;
   }
 }
-@media only screen and (max-width:744px) {
-  .onayödemenav, .geriikon{
+@media screen and (max-width:744px) {
+  .onayödemenav,.geriikon, .onaybaslik, .sagpanel ,.sag-pnl,.sagg_icerik{
     display: none;
   }
-  .onaynav{
-    display: block !important;
-    position: sticky ;
-    top: 20;
-    z-index: 5;
-    
+  .seyahat{
+    display: none;
     
   }
+  .onaynav-res{
+    display: inline;
+    position: fixed ;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    width: 100%;    
+  }
+  .onaynav-res .onay-res .onay-resh3{
+    font-size: 14px;
+  }
+  .onay-res{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    
+  }
+  .onaynav-res{
+    display: flex !important;
+    align-items: center !important;
+    height: 60px;
+  }
+  .sagg_icerik{
+    display: block;
+  }
+    
   
 }
 .onaynav{
