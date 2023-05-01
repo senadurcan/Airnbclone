@@ -18,18 +18,20 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+            <form method="POST" action="{% url 'filter' %}">
+            {% csrf_token %}
             <div class="fiyat-aralıgı">
                 <h5>Fiyat Aralığı</h5>
             </div>       
             <div class="price-input mt-5">
                 <div class="field">
                     <span style="font-size: 12px;">Minnimum Fiyat</span>
-                    <input type="number" class="input-min" value="2500">
+                    <input type="number" name="min_price" class="input-min" value="2500">
                 </div>
                 <div class="separator">-</div>
                 <div class="field">
                     <span style="font-size: 12px;">Maximum Fiyat</span>
-                    <input type="number" class="input-max" value="7500">
+                    <input type="number" name="max_price" class="input-max" value="7500">
                 </div>
             </div>
             <div class="main-slider mt-5">
@@ -44,7 +46,7 @@
             <div class="fiyat-aralıgı mt-4 w-100 mb-5">
                 <h5>Kategoriler</h5>
                         <div class="select-box">
-                            <select class="rounded-3"  id="">
+                            <select name="kategori" class="rounded-3"  id="">
                                 {% for kategori in kategoriler %}
                                     <option value="">{{kategori.isim}}</option>
                                 {% endfor %}
@@ -56,7 +58,7 @@
             <div class="fiyat-aralıgı mt-4 w-100 mb-5">
                 <h5>Loksayon</h5>        
                         <div class="select-box">
-                            <select class="rounded-3" id="country">
+                            <select name="location" class="rounded-3" id="country">
                                 
                             </select>
                             <i class="fa fa-chevron-down" aria-hidden=""></i>
@@ -64,78 +66,82 @@
                         
             
             </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary">Konaklanacak yerleri göster</button>
+            <div class="modal-footer">
+                <button type="submit" name="filtre" class="btn btn-secondary">Konaklanacak yerleri göster</button>
+              </div>
+        </form>
         </div>
         </div>
     </div>
 </div>
 <div class="main-container">
-    <div class="row m-auto d-flex justify-content-between">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+
     {% for post in posts %}
-        
-    <div class="card mt-5 post-card " style="width: 18rem; border: none;">
-        <a class="nav-link" href="{% url 'detay' post.slug %}">
-        <div id="{{post.id}}" class="carousel slide">
-            <div class="carousel-indicators">
-            <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="4" aria-label="Slide 5"></button>
+     <div class="col">
+        <div class="card mt-5 post-card " style="width: 18rem; border: none;">
+            <a class="nav-link" href="{% url 'detay' post.slug %}">
+            <div id="{{post.id}}" class="carousel slide">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#{{post.id}}" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner carousel-items rounded-3">
+                        <div class="carousel-item active">
+                            <img src="{{post.resim1.url}}" height="170px" class="d-block w-100" alt="...">    
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{post.resim2.url}}" height="170px" class="d-block w-100" alt="...">    
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{post.resim3.url}}" height="170px" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{post.resim4.url}}" height="170px" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{post.resim5.url}}" height="170px" class="d-block w-100" alt="...">
+                        </div>
+                        
+                </div>
+                <button class="likebutton">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+                <button  class="carousel-control-prev" type="button" data-bs-target="#{{post.id}}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon crsl" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#{{post.id}}" data-bs-slide="next">
+                    <span  class="carousel-control-next-icon crsl" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
             </div>
-            <div class="carousel-inner carousel-items rounded-3">
-                    <div class="carousel-item active">
-                        <img src="{{post.resim1.url}}" height="170px" class="d-block w-100" alt="...">    
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{post.resim2.url}}" height="170px" class="d-block w-100" alt="...">    
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{post.resim3.url}}" height="170px" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{post.resim4.url}}" height="170px" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{post.resim5.url}}" height="170px" class="d-block w-100" alt="...">
-                    </div>
-                    
-            </div>
-            <button class="likebutton">
-                <i class="fa-solid fa-heart"></i>
-            </button>
-            <button  class="carousel-control-prev" type="button" data-bs-target="#{{post.id}}" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon crsl" aria-hidden="true"></span>
-                <span class="visually-hidden"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#{{post.id}}" data-bs-slide="next">
-                <span  class="carousel-control-next-icon crsl" aria-hidden="true"></span>
-                <span class="visually-hidden"></span>
-            </button>
-        </div>
-        <div class="post-content">
-            <div class="row">
-                <div class="col-9 card-left">
-                    <h6 class="mt-2">
-                        {{post.location}}
-                        <p style="font-size: 12px; color: grey !important; margin-top: 2px;" class="text-muted ">
-                            {{post.uzaklik}} <br> 26 Nis-1 May1
+            <div class="post-content">
+                <div class="row">
+                    <div class="col-9 card-left">
+                        <h6 class="mt-2">
+                            {{post.location}}
+                            <p style="font-size: 12px; color: grey !important; margin-top: 2px;" class="text-muted ">
+                                {{post.uzaklik}} <br> 26 Nis-1 May1
+                            </p>
+                        </h6>
+                        <p style="font-weight: 600;" class="card-text">
+                            {{post.fiyat}} ₺ <s style="font-weight: 300;" class="text-muted">gece</s>
                         </p>
-                    </h6>
-                    <p style="font-weight: 600;" class="card-text">
-                        {{post.fiyat}} ₺ <s style="font-weight: 300;" class="text-muted">gece</s>
-                    </p>
-                </div>  
-                <div  class="col-3 card-right mt-2">
-                    <i class="fa-solid fa-star"></i> <s>5,0</s>
+                    </div>  
+                    <div  class="col-3 card-right mt-2 text-end">
+                        <i class="fa-solid fa-star"></i> <s>5,0</s>
+                    </div>
                 </div>
             </div>
-        </div>
-    </a>
-
-    </div> 
+        </a>
+    
+        </div> 
+     </div>   
+    
 
 {% endfor %}
 

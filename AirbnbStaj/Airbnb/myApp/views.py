@@ -34,10 +34,13 @@ def filter(request):
             Q(location__contains = location ) &
             Q(kategori__isim__contains = kategori ) 
         )
+
+        uzunluk = len(posts)
     
     context={
         'kategoriler' :kategoriler,
-        'posts' : posts
+        'posts' : posts,
+        'uzunluk' : uzunluk
     }
     return render(request , 'filter.html' , context)
 
