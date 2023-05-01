@@ -9,7 +9,7 @@
 {% block content %}
 <section class="container hesap__section">
     <h2 class="ms-3 mt-5 hesap__h2">Hesap</h2>
-    <p class="ms-3 mt-2"><b class="hesap__b">Osman Işık</b>, osman.asl@icloud.com. <b><a href="" class="text-dark user__a">Profilinizi gidin.</a></b> </p>
+    <p class="ms-3 mt-2"><b class="hesap__b">{{user.profil.isim}}</b>,{{request.user.email}}. <b><a href="" class="text-dark user__a">Profilinizi gidin.</a></b> </p>
 </section>
 
 <div class="container hesap__width">

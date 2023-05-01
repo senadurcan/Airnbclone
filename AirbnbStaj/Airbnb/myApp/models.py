@@ -49,7 +49,7 @@ class Profil(models.Model):
     kullanici = models.OneToOneField(User, on_delete=models.CASCADE)
     isim = models.CharField(max_length=50)
     soyisim = models.CharField(max_length=50)
-    email = models.CharField(max_length=50)
+    telefon = models.CharField(max_length=50)
     profilresim = models.FileField(upload_to='profilpic/' ,default='profilpic/default.jpg',blank=True)
     meslek = models.CharField(max_length=50)
     slug = models.SlugField(null=True , unique= True , db_index=True , blank=True , editable=False)
