@@ -147,9 +147,38 @@ def hesap(request):
     return render(request , 'hesap/hesap.html')
 
 def hesapKisisel(request):
-    return render(request ,'hesap/kisisel-bilgiler.html')
+    user = request.user.profil
+    form = HesapForm(instance=user)
+    if request.method == 'POST':
+        form = HesapForm(request.POST,request.FILES,instance = user)
+        if form.is_valid():
+            form.save()
+            messages.success(request,'Profil bilgileri güncellendi')
+            return redirect('hesap')
+    context = {
+        'form':form
+    }
+    return render(request ,'hesap/kisisel-bilgiler.html',context)
 
 def guvenlik(request):
+    user = request.user
+    if request.method == 'POST':
+        eski = request.POST['eski']
+        yeni1 = request.POST['yeni1']
+        yeni2 = request.POST['yeni2']
+
+        yeni = authenticate(request,username=user,password=eski)
+
+        if yeni is not None:
+            if yeni1 == yeni2:
+                user.set_password(yeni1)
+                user.save()
+                messages.success(request,'Şifrenis değiştirildi')
+                return redirect('anasayfa')
+            else:
+                messages.error(request,'Şifreler uyuşmuyor')
+        else:
+            messages.error(request,'Mevcut şifreniz hatalı')  
     return render(request ,'hesap/güvenlik.html')
 
 def payment(request):
