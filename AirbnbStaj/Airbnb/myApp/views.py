@@ -204,3 +204,8 @@ def sahiplik(request):
 
 def misafir(request):
     return render(request,'hesap/misafir.html')
+
+def contact_host(request):
+    return render(request, 'contact_host.html')
+def onayödeme(request):
+    return render(request, 'onayödeme.html')
