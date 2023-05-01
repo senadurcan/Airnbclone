@@ -1722,9 +1722,11 @@ margin-right: 50px;
   .onayödemenav,.geriikon, .onaybaslik, .sagpanel ,.sag-pnl,.sagg_icerik{
     display: none;
   }
-  .seyahat{
+  .seyahat, .odmscnk, .fytayrnt{
     display: none;
-    
+  }
+  .seyahatres .odmscnkres, .fytayrntres{
+    display: block;
   }
   .onaynav-res{
     display: inline;
