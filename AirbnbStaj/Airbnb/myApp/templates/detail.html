@@ -7,7 +7,7 @@
 <header class="detail-header p-3 m-2">
     <div class="main-container">
             <div class="d-flex align-items-center justify-content-between main-navbar">
-                    <a href="">
+                    <a href="/">
                         <img src="{% static 'image/airbnb.png' %}" width="90px" alt="">
                     </a>
             
@@ -18,17 +18,31 @@
                     </div>
 
                     <div class="text-end navbar-right d-flex"> 
-                        <button style="background-color: #fff;" class="mx-4" type="button">Evinizi Airbnb'ye taşıyın</button>
+                        <a href="{% url 'host' %}"><button style="background-color: #fff;" class="mx-4 my-2" type="button">Evinizi Airbnb'ye taşıyın</button></a>
                         <div class="dropdown dropdwon-menu">
                             <a class="btn bg-white btn-outline-dark dropdown rounded-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="uil uil-align-justify"></i>
-                                <img src="{% static 'image/airbnb.png' %}" width="35px" alt="">
+                                <img src="{{request.user.profil.profilresim.url}}" width="35px" alt="">
                             </a>
                         
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                {% if user.is_authenticated %}
+                                        <li><a class="dropdown-item main-dropdown-menu-itemsust" href="#">Mesajlar</a></li>
+                                        <li><a class="dropdown-item main-dropdown-menu-itemsust" href="#">Seyehatler</a></li>
+                                        <li><a class="dropdown-item main-dropdown-menu-itemsust" href="#">Favoriler</a></li>
+                                        <hr>
+                                        <li><a class="dropdown-item main-dropdown-menu-items" href="#">Kayıtları Yönetin</a></li>
+                                        <li><a class="dropdown-item main-dropdown-menu-items" href="{% url 'hesap' %}">Hesap</a></li>
+                                        <hr>
+                                        <li><a class="dropdown-item main-dropdown-menu-items" href="#">Yardım</a></li>
+                                        <li><a class="dropdown-item main-dropdown-menu-items" href="{% url 'logout' %}">Oturumu Kapatın</a></li>
+                                    {% else %}
+                                        <li><a class="dropdown-item main-dropdown-menu-itemsust register" href="{% url 'loginregister' %}">Kaydolun</a></li>
+                                        <li><a class="dropdown-item main-dropdown-menu-itemsust login" href="{% url 'loginregister' %}">Oturum Açın</a></li>
+                                        <hr>
+                                        <li><a class="dropdown-item main-dropdown-menu-items" href="#">Yardım</a></li>
+                                        <li><a class="dropdown-item main-dropdown-menu-items" href="{% url 'host' %}">Evinizi Airbnb'ye taşıyın</a></li>
+                                    {% endif %}
                             </ul>
                         </div>
                     </div>
@@ -111,14 +125,14 @@
 <div class="detail">
     <div class="detail-info-web mt-2 m-5">
         <div class="m-4">
-            <h3>Mylo Villa, Lüks Villa</h3>
+            <h3>{{postDetay.isim}}</h3>
             <div class="d-flex detail-assessment" style="font-size: 15px;">
                 <p>
                     <i class="fa-solid fa-star"></i> 5,0 
                     <span> . </span>
                     <u style="text-decoration:underline!important"> 7 değerlendirme </u>  
                     <i class="ms-2 fa-solid fa-award"></i>  Süper Ev Sahibi .
-                    <p class="ms-2" style="text-decoration:underline!important">Paros, Yunanistan</p>
+                    <p class="ms-2" style="text-decoration:underline!important">{{postDetay.location}}</p>
                 </p> 
                 <div class="share" style="margin-left: auto;">
                     <i class="fa-solid fa-arrow-up-from-bracket"></i>
@@ -131,17 +145,17 @@
     <div class="detail-head m-4 ">
         <div class="row">
             <div class="col-sm-12 col-xl-6 d-flex detail-head-img">
-                <img class="detail-img-head" src="{% static 'image/detail-img-1.jpg' %}" alt="" width="300px" height="472px"> 
+                <img class="detail-img-head" src="{{postDetay.resim1.url}}" alt="" width="300px" height="472px"> 
             </div>
             <div class="col-6 detail-head-little-img ">
                     <div class="row">
                             <div class="col-6 detail-head-little-img d-block" style="padding:0;">
-                                <img class="detail-img-1"  src="{% static 'image/detail-img-2.jpg' %}" alt="" width="360" height="230">
-                                <img class="detail-img-2 mt-4"  src="{% static 'image/detail-img-3.jpg' %}" alt="" width="360" height="230" style="margin-top: 12px!important;">
+                                <img class="detail-img-1"  src="{{postDetay.resim2.url}}" alt="" width="360" height="230">
+                                <img class="detail-img-2 mt-4"  src="{{postDetay.resim3.url}}" alt="" width="360" height="230" style="margin-top: 12px!important;">
                             </div>
                             <div class="col-6 detail-head-little-img d-block ">
-                                <img class="detail-img-3"  src="{% static 'image/detail-img-3.jpg' %}" alt="" width="360" height="230">
-                                <img class="detail-img-4 mt-4"  src="{% static 'image/detail-img-2.jpg' %}" alt="" width="360" height="230" style="margin-top: 12px!important;">
+                                <img class="detail-img-3"  src="{{postDetay.resim4.url}}" alt="" width="360" height="230">
+                                <img class="detail-img-4 mt-4"  src="{{postDetay.resim5.url}}" alt="" width="360" height="230" style="margin-top: 12px!important;">
                             </div>
                         </div>
                 </div>
@@ -156,14 +170,12 @@
             <div class="col-8">
                 <div class="row detail-profil-web">
                     <div class="col-6">
-                        <h4> Tüm Villa Ev sahibi: Emre</h4>
-                        <small style="color: grey;">2 misafir <span> .</span></small> 
-                        <small style="color: grey;">1 yatak odası <span> .</span></small> 
-                        <small style="color: grey;">1 yatak <span> .</span></small> 
-                        <small style="color: grey;">1 banyo</small> 
+                        <h4> Tüm Villa Ev sahibi: {{postDetay.evsahibi}}</h4>
+                        <small style="color: grey;">{{postDetay.bilgi}}<span> .</span></small> 
+                        
                     </div>
                     <div class="col-6" style="text-align: right;">
-                        <img class="rounded-circle" src="{% static 'image/Emre.jpg'%}" alt="photo" width="50px" height="50px">
+                        <img class="rounded-circle" src="{{ postDetay.evsahibi.profil.profilresim.url }}" alt="photo" width="50px" height="50px">
                     </div>
                 </div>
                 <hr>
@@ -301,7 +313,7 @@
                             <div class="col-4 detail-right">
                                 <div class=" detail-right-card">
                                     <div class="d-flex">
-                                        <h5>32.560 ₺</h5><small class=" me-5 ms-2">gece</small>
+                                        <h5>{{postDetay.fiyat}} ₺</h5><small class=" me-5 ms-2">gece</small>
                                         <i class=" ms-2 mt-1 fa-solid fa-star"></i>
                                         <span class="me-1 ms-1">5,0</span> 
                                         <span> . </span>

@@ -8,7 +8,8 @@ from myApp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index , name='anasayfa'),
-    path('detay/',detay, name='detay'),
+    path('detay/<str:postId>',detay, name='detay'),
+    path('kategori/<str:slug>',kategori , name='kategori' ),
     path('profil/',profil, name='profil'),
     path('hesap/',hesap, name='hesap'),
     path('host/' , host , name="host"),

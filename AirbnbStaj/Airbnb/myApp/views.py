@@ -20,6 +20,17 @@ def index(request):
 
     return render(request , 'anasayfa.html' , context)
 
+def kategori(request,slug):
+    kategoriler = Kategori.objects.all()
+    
+    posts= Post.objects.filter(kategori__slug=slug)
+    # posts = Post.objects.filter()
+    context={
+            'posts' :posts,
+            'kategoriler' : kategoriler
+        }
+    return render(request , 'kategori.html',context)
+
 def loginregister(request):
 
     
@@ -81,8 +92,12 @@ def profil(request):
     return render(request,'profil.html')
 
 
-def detay(request):
-    return render(request , 'detail.html')
+def detay(request , postId):
+    postDetay = Post.objects.get(slug = postId)
+    context = {
+        'postDetay' : postDetay
+    }
+    return render(request , 'detail.html' ,context)
 
 
 def host(request):
