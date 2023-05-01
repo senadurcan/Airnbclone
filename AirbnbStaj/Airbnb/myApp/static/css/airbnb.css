@@ -1708,12 +1708,6 @@ margin-right: 50px;
 .sagg{
   display: none;
 }
-.soll{
-  margin: auto;
-}
-.solll{
-  margin: auto;
-}
 .bar-search, .i, .input{
   display: none;
   }
@@ -1722,12 +1716,30 @@ margin-right: 50px;
   .onayödemenav,.geriikon, .onaybaslik, .sagpanel ,.sag-pnl,.sagg_icerik{
     display: none;
   }
-  .seyahat, .odmscnk, .fytayrnt{
+  .seyahat, .odmscnk, .fytayrnt, .soll{
     display: none;
   }
-  .seyahatres .odmscnkres, .fytayrntres{
+  .buttoncardres{
+    background-color: none;
+  }
+  .seyahatres .odmscnkres, .fytayrntres, .snnloderes, .syhtres, .iptalres, .temelres, .gizlilikres{
     display: block;
   }
+  .footeronayres, .footerresalt{
+    display: block;
+    float: left;
+  }
+  .footeronay .footerssyl{
+    display: none;
+  }
+
+  .modal-dialogres {
+    position:fixed;
+    top:auto;
+    right:auto;
+    left:auto;
+    bottom:0;
+ } 
   .onaynav-res{
     display: inline;
     position: fixed ;
@@ -1752,11 +1764,9 @@ margin-right: 50px;
   }
   .sagg_icerik{
     display: block;
-  }
-    
-  
+  } 
 }
-.onaynav{
+.onaynav .seyahatres .odmscnkres, .fytayrntres, .snnloderes, .syhtres, .iptalres, .temelres, .gizlilikres{
   display: none;
 }
 .bar-search{

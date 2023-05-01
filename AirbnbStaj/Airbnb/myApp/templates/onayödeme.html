@@ -13,7 +13,7 @@
         <h3 class="onaybaslik ms-4 fw-medium  ">Onay ve Ödeme</h3>
     </div>
     <div class="row">
-        <div class="col-6 me-4 solll">
+        <div class="col-6 me-4 soll">
             <div class="seyahat"> 
                 <div class="row">
                     <h4 class="mt-4">Seyahatiniz</h4>
@@ -184,6 +184,27 @@
         </div>
     </div>
 </div>
+<div class="footeronay mt-4">
+    <hr>
+    <div class="d-flex align-items-center text-center justify-content-center mt-3 ">
+        <i class="fa-solid fa-globe me-2"></i>
+        <a href="" style="text-decoration: none;" class="fw-medium text-dark text-none me-2">Türkçe (TR)</a>
+        <a href="" style="text-decoration: none;" class="fw-medium text-dark text-none me-5">₺ TRY</a>
+        <div class="footerssyl"> 
+            <i class="fa-brands fa-square-facebook fa-lg me-2" style="color: #000000;"></i>
+            <i class="fa-brands fa-square-twitter fa-lg me-2" style="color: #000000;"></i>
+            <i class="fa-brands fa-square-instagram fa-lg me-2" style="color: #000000;"></i>
+        </div>
+    </div>
+    <div class="ress2023 justify-content-center text-center d-inline mt-3">
+    <p class="d-inline">© 2023 Airbnb, Inc.</p> 
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href="" style="text-decoration: none;" class="text-dark me-2">Gizlilik</a>
+        <a href="" style="text-decoration: none;" class="text-dark ">- Şartlar -</a>
+        <a href="" style="text-decoration: none;" class="text-dark ms-2">Site haritası</a>
+    </div>
+</div>
 <!-- Responsive -->
 <div class="onaynav-res ">
         <a href="{% url 'contact_host' %}" class="navgeri text-dark mt-3 ms-4">
@@ -262,6 +283,126 @@
     <div class="d-flex justify-content-between">
         <p class="fw-bold mt-4">Toplam (<a class="text-dark" href="">TRY)</a></p>
         <p class="fw-bold mt-4">56.394,00 ₺</p>
+    </div>
+</div>
+<div class="snnloderes mt-4">
+    <h4>Şununla Ödeyin:</h4>
+    <div class="d-flex mt-4 align-items-center">
+        <i class="fa-regular fa-credit-card fa-xl" style="color: #a0aabb;"></i>
+        <button type="button" class="buttoncardres ms-4"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Kredi veya banka kartı
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade " id="exampleModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+              <div class="modal-content w-100 ">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Kart bilgilerini ekleyin</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="fa-brands fa-cc-amex fa-lg me-2" style="color: #8da1c3;"></i>
+                    <i class="fa-brands fa-cc-visa fa-lg" style="color: #30476e;"></i>
+                    <i class="fa-brands fa-cc-mastercard fa-lg ms-2" style="color: #e94e4e;"></i>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="cardno" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput"><s class="text-muted"> Kart numarası </s> <i class="fa-solid fa-lock fa-xs" style="color: #969eab;"></i> </label>
+                    </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput "><s class="text-muted"> Son Kullanma Tarihi</s></label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                    <label for="floatingInput"> <s class="text-muted">CVV</s></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput"><s class="text-muted">Posta Kodu</s></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput"><s class="text-muted">Ülke Bölge</s></label>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-dark w-100" data-bs-dismiss="modal">Bitti</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+    <div class="d-flex align-items-center mt-3">
+       <i class="fa-brands fa-google-pay fa-xl me-3" style="color: #608cd2;"></i><s class="">Google Pay</s>
+    </div>
+    <hr>
+    <a href="" class="text-dark d-block fw-bold">Bir kupon girin</a>
+</div>
+<div class="syhtres">
+    <h4 class="text-dark">Seyahatiniz için gerekli</h4>
+    <p class="evshbmsj text-dark fw-bold mt-3">Ev sahibine mesaj gönderin</p>
+    <s class="syhtndn text-dark mb-5">Seyahat nedeninizi ve ne zaman giriş yapacağınızı ev sahibine bildirin.</s>
+    <div class="container bg-light rounded-3">
+        <div class="d-flex">
+            <img class="rounded-5 me-3 mt-3" src="{% static 'image/doga2.jpg' %}" width="50" height="50">
+            <p class="sahpbilgi mt-3 text-dark"><b class="fs-6"> Markos</b><br><s class="text-dark"> Mikonos Divino Villalarına Hoş Geldiniz...</s></p> 
+        </div>
+        <div class="mesajbilgi">
+            <p class="sahpbilgi text-dark">Tatiliniz için bizi seçtiğiniz için teşekkür ederiz!</p>
+            <p class="sahpbilgi text-dark">Her türlü bilgi için lütfen bizimle iletişime geçmekten çekinmeyin.</p>
+            <p class="sahpbilgi text-dark fw-light"><i class="fa-solid fa-language fa-sm me-2" style="color: #545c69;"></i>Türkçe dilinden çevrildi. <a class="text-dark me-2" href="">Orijinal dilde göster</a></p>
+        </div>
+    </div>
+    <textarea class="textareamsj mt-3" rows="5" ></textarea>
+</div>
+<div class="iptalres">
+    <h4 class="text-dark mt-4">İptal Politikası</h4>
+    <p class="iptaltxt text-dark mt-4"><b class="text-dark"> 48 saat içinde ücretsiz iptal.</b> Kısmi para iadesi için 10 Haz tarihinden önce iptal edin. <a class="text-dark" href=""><b> Daha fazla bilgi edinin</b></p></a>
+</div>
+<div class="temelres">
+    <h5 class="text-dark mt-4">Temel Kurallar</h5>
+    <p class="text-dark fw-normal">Her misafirden, harika bir misafirin nasıl olması gerektiği hakkında birkaç basit şeyi dikkate almasını isteriz.</p>
+    <ul class="iptaltxt text-dark fw-normal">
+        <li>Ev kurallarına uyun.</li>
+        <li>Ev sahibinizin evine kendi evinizmiş gibi saygı gösterin</li>
+    </ul>
+</div>
+<div class="gizlilikres">
+    <s class="sozlesme text-dark text-light mt-5">Aşağıdaki düğmeye tıklayarak  <a class="text-dark fw-medium" href="">ev sahibinin ev kuralları, Misafirlere yönelik temel kurallar, Airbnb'nin Yeniden
+        Rezervasyon ve Para İadesi Politikası </a>şartlarını ve hasardan sorumlu olmam durumunda Airbnb'nin <a class="text-dark fw-medium" href=""> ödeme yöntemimden tahsil edebileceğini </a>kabul ediyorum.
+    </s>
+    <p class="sozlesme text-dark mt-3"><a class="fw-medium" href=""> Güncellenen Hizmet Şartları</a> ile <a class="fw-medium" href=""> Ödeme Hizmet Şartları</a>'nı kabul ediyorum ve <a class="fw-medium" href=""> Gizlilik Politikası</a>'nı onaylıyorum.</p>
+
+    <button class="onayöde mt-3 w-100"><b class="text-light">Onayla ve öde</b></button>
+
+</div>
+<div class="footeronayres mb-3 mt-3 ">
+    <div class="d-flex align-items-center text-center justify-content-center mt-3 ">
+        <i class="fa-solid fa-globe me-2"></i>
+        <a href="" style="text-decoration: none;" class="fw-medium text-dark text-none me-2">Türkçe (TR)</a>
+        <a href="" style="text-decoration: none;" class="fw-medium text-dark text-none me-5">₺ TRY</a>
+        <div class="footerssyl"> 
+            <i class="fa-brands fa-square-facebook fa-lg me-2" style="color: #000000;"></i>
+            <i class="fa-brands fa-square-twitter fa-lg me-2" style="color: #000000;"></i>
+            <i class="fa-brands fa-square-instagram fa-lg me-2" style="color: #000000;"></i>
+        </div>
+    </div>
+
+    <p class="ress2023res mt-4">© 2023 Airbnb, Inc.</p> 
+
+    <div class="footerresalt d-flex justify-content-center">
+        <a href="" style="text-decoration: none;" class="text-dark me-2">Gizlilik</a>
+        <a href="" style="text-decoration: none;" class="text-dark ">- Şartlar -</a>
+        <a href="" style="text-decoration: none;" class="text-dark ms-2">Site haritası</a>
     </div>
 </div>
 {% endblock content %}
