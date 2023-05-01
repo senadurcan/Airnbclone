@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
 from .forms import *
-
+from django.db.models import Q
 from .models import *
 
 
@@ -19,6 +19,27 @@ def index(request):
         }
 
     return render(request , 'anasayfa.html' , context)
+
+def filter(request):
+    kategoriler = Kategori.objects.all()
+
+    if 'filtre' in request.POST:
+        minprice = request.POST['min_price']
+        maxprice = request.POST['max_price']
+        kategori = request.POST['kategori']
+        location = request.POST['location']
+        print(minprice,minprice)
+        posts = Post.objects.filter(
+            Q(fiyat__range = (minprice,maxprice)) &
+            Q(location__contains = location ) &
+            Q(kategori__isim__contains = kategori ) 
+        )
+    
+    context={
+        'kategoriler' :kategoriler,
+        'posts' : posts
+    }
+    return render(request , 'filter.html' , context)
 
 def kategori(request,slug):
     kategoriler = Kategori.objects.all()

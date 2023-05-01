@@ -18,18 +18,20 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+            <form method="POST" action="{% url 'filter' %}">
+            {% csrf_token %}
             <div class="fiyat-aralıgı">
                 <h5>Fiyat Aralığı</h5>
             </div>       
             <div class="price-input mt-5">
                 <div class="field">
                     <span style="font-size: 12px;">Minnimum Fiyat</span>
-                    <input type="number" class="input-min" value="2500">
+                    <input type="number" name="min_price" class="input-min" value="2500">
                 </div>
                 <div class="separator">-</div>
                 <div class="field">
                     <span style="font-size: 12px;">Maximum Fiyat</span>
-                    <input type="number" class="input-max" value="7500">
+                    <input type="number" name="max_price" class="input-max" value="7500">
                 </div>
             </div>
             <div class="main-slider mt-5">
@@ -44,7 +46,7 @@
             <div class="fiyat-aralıgı mt-4 w-100 mb-5">
                 <h5>Kategoriler</h5>
                         <div class="select-box">
-                            <select class="rounded-3"  id="">
+                            <select name="kategori" class="rounded-3"  id="">
                                 {% for kategori in kategoriler %}
                                     <option value="">{{kategori.isim}}</option>
                                 {% endfor %}
@@ -56,7 +58,7 @@
             <div class="fiyat-aralıgı mt-4 w-100 mb-5">
                 <h5>Loksayon</h5>        
                         <div class="select-box">
-                            <select class="rounded-3" id="country">
+                            <select name="location" class="rounded-3" id="country">
                                 
                             </select>
                             <i class="fa fa-chevron-down" aria-hidden=""></i>
@@ -64,10 +66,12 @@
                         
             
             </div>
+            <div class="modal-footer">
+                <button type="submit" name="filtre" class="btn btn-secondary">Konaklanacak yerleri göster</button>
+              </div>
+        </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary">Konaklanacak yerleri göster</button>
-        </div>
+        
         </div>
     </div>
 </div>

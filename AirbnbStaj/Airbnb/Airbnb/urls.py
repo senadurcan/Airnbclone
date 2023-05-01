@@ -9,6 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index , name='anasayfa'),
     path('detay/<str:postId>',detay, name='detay'),
+    path('filter/' , filter , name='filter'),
     path('kategori/<str:slug>',kategori , name='kategori' ),
     path('profil/',profil, name='profil'),
     path('hesap/',hesap, name='hesap'),
