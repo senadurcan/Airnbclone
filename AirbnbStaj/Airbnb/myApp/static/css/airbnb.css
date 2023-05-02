@@ -1712,7 +1712,7 @@ margin-right: 50px;
   display: none;
   }
 }
-@media screen and (max-width:744px) {
+@media only screen  and (max-width:744px) {
   .onayödemenav,.geriikon, .onaybaslik, .sagpanel ,.sag-pnl,.sagg_icerik{
     display: none;
   }
@@ -1766,11 +1766,8 @@ margin-right: 50px;
     display: block;
   } 
 }
-.onaynav-res, .sagg_icerikres, .seyahatres, .odmscnkres, .fytayrntres, .snnloderes, .syhtres, .iptalres, .temelres , .gizlilikres, .footeronayres{
+.onaynav-res, .sagg_icerikres, .seyahatres, .odmscnkres, .fytayrntres, .snnloderes, .syhtres, .iptalres, .temelres, .gizlilikres, .footeronayres{
   display: none !important;
-}
-.seyahatres .row{
-  display: none;
 }
 .footeronay{
   display: block;
