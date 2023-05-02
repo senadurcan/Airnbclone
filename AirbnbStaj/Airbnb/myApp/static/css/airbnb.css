@@ -1641,3 +1641,277 @@ margin: auto;
     display: none;
   }
 } 
+/* Alp */
+.silikyazı{
+  color: grey;
+  font-weight: 100;
+  font-size: medium;
+}
+.textarea{
+  border: solid lightgray;
+  border-radius: 8px;
+  border-width: 1px;
+}
+.textarea:focus-visible{
+  border-width: 0.1px !important;
+  border: solid rgb(12, 12, 12);
+  border-radius: 8px;
+}
+.mesajj{
+  border: solid black;
+  width: 150px;
+  height: 55px;
+  border-radius: 8px;
+  border-width: 1px;
+}
+.sagg{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  color: black;
+  border-radius: 10px;
+  position: sticky;
+  top: 105px;
+  z-index: 99;
+}
+.ilandetayy{
+font-size: 12px;   
+display: inline;
+}
+.ilandetayyy{
+font-size: 14px;
+width: 100px;
+display: inline;
+}
+.sagimg{
+float: right;
+width: 100px;
+height: 100px;
+border-radius: 10px;
+align-items: right;
+}
+.solimg{
+float: right;
+width: 60px;
+height: 60px;
+border-radius: 50px;
+
+margin-right: 50px;
+}
+@media screen and (max-width:1140px) {
+.sagimg{
+  display: none;
+}
+}
+@media screen and (max-width:720) {
+.contactnav{
+  display: none;
+}
+.sagg{
+  display: none;
+}
+.soll{
+  margin: auto;
+}
+.solll{
+  margin: auto;
+}
+.bar-search, .i, .input{
+  display: none;
+  }
+}
+@media screen and (max-width:744px) {
+  .onayödemenav,.geriikon, .onaybaslik, .sagpanel ,.sag-pnl,.sagg_icerik{
+    display: none;
+  }
+  .seyahat, .odmscnk, .fytayrnt{
+    display: none;
+  }
+  .seyahatres .odmscnkres, .fytayrntres{
+    display: block;
+  }
+  .onaynav-res{
+    display: inline;
+    position: fixed ;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    width: 100%;    
+  }
+  .onaynav-res .onay-res .onay-resh3{
+    font-size: 14px;
+  }
+  .onay-res{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    
+  }
+  .onaynav-res{
+    display: flex !important;
+    align-items: center !important;
+    height: 60px;
+  }
+  .sagg_icerik{
+    display: block;
+  }
+    
+  
+}
+.onaynav{
+  display: none;
+}
+.bar-search{
+background: var(--color-light);
+padding: var(--search-padding);
+border: 1px solid grey;
+padding: 8px;
+}
+
+.bar-search i {
+background-color: #FF385C;
+padding: 5px;
+color: #fff;
+}
+
+.bar-search- input[type="search"] {
+background: transparent;
+width: 30vw;
+margin-left: 1rem;
+font-size: 0.9rem;
+color: var(--color-dark);
+}
+
+nav .bar-search input[type="search"]::placeholder{
+color: var(--color-gray);
+}
+.navlogo{
+width: 160px;
+}
+.onaybaslik{
+font-size: 28px;
+}
+.tamamıode{
+border: solid black;
+padding: 8px;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+border-width: 0.1px;
+}
+.birazode{
+border: solid lightgray;
+padding: 8px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-width: 0.1px;
+}
+
+/* drpdwn */  
+.dropbtn {
+background-color: white;
+color: black;
+padding: 16px;
+font-size: 16px;
+border: none;
+}
+
+.dropdown {
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.kartonay{
+position: relative;
+float: right;
+}
+.kartbilgi{
+border: solid grey 0.1px;
+border-radius: 7px;
+}
+/* drpdwn */
+.evshbmsj{
+font-size: 15px;
+}
+.syhtndn{
+font-size: 14px;
+}
+.sahpbilgi{
+font-size: 14px;
+}
+.mesajbilgi{
+margin-left: 65px;
+}
+.textareamsj{
+border: solid lightgray;
+width: 100%;
+resize: vertical;
+border-radius: 8px;
+border-width: 1px;
+}
+.textarea:focus-visible{
+border-width: 0.1px !important;
+border: solid rgb(12, 12, 12);
+border-radius: 8px;
+}
+.iptaltxt{
+font-size: 15px;
+}
+.sozlesme{
+font-size: 12px;
+}
+.onayöde{
+background-color: #FF385C;
+width: 190px;
+height: 55px;
+border-radius: 8px;
+}
+.sagpanel{
+border: solid lightgray;
+border-width: 0.1px;
+border-radius: 8px;
+position: sticky;
+top: 70px;
+}
+.tkk{
+font-size: 12px;
+}
+.evacklm{
+font-size: 13px;
+color: black !important;
+}
+.dgr{
+font-size: 12px;
+display: block;
+
+}
+.thslt{
+  font-size: 12px;
+}
+
+.main-container-host, .main-navbarr, .barr-search, .ddd, .drpdwn_, .sss{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.navczg{
+  border-width: 0.5px;
+  border-color: grey;
+}
+
+/* Alpson */
