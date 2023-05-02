@@ -1725,11 +1725,11 @@ margin-right: 50px;
   .seyahatres .odmscnkres, .fytayrntres, .snnloderes, .syhtres, .iptalres, .temelres, .gizlilikres{
     display: block;
   }
-  .footeronayres, .footerresalt{
+  .footeronayres{
     display: block;
     float: left;
   }
-  .footeronay .footerssyl{
+  .footeronayres .footerssylres{
     display: none;
   }
 
@@ -1766,9 +1766,19 @@ margin-right: 50px;
     display: block;
   } 
 }
-.onaynav .seyahatres .odmscnkres, .fytayrntres, .snnloderes, .syhtres, .iptalres, .temelres, .gizlilikres{
+.onaynav-res, .sagg_icerikres, .seyahatres, .odmscnkres, .fytayrntres, .snnloderes, .syhtres, .iptalres, .temelres , .gizlilikres, .footeronayres{
+  display: none !important;
+}
+.seyahatres .row{
   display: none;
 }
+.footeronay{
+  display: block;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+
 .bar-search{
 background: var(--color-light);
 padding: var(--search-padding);
