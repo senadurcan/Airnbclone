@@ -112,7 +112,7 @@
         <div class="container hesap__container hesap__delete">
             <h4 class="text-muted mb-3">Hesap</h>  
             <p class="hesap__p mt-4">Hesabınızı devre dışı bırakın</p>   
-            <a href="" class="nav-link text-opacity-75 text-end text-danger">Devre dışı bırak</a>
+            <a href="{% url 'delete' user.id %}" class="nav-link text-opacity-75 text-end text-danger">Devre dışı bırak</a>
             <hr class="w-100">
         </div>    
     </div>
