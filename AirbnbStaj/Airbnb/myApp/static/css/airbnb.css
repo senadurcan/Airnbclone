@@ -1705,29 +1705,38 @@ margin-right: 50px;
 .contactnav{
   display: none;
 }
-.sagg{
-  display: none;
-}
+
 .bar-search, .i, .input{
   display: none;
   }
 }
-@media only screen  and (max-width:744px) {
+@media screen  and (max-width:744px) {
   .onayödemenav,.geriikon, .onaybaslik, .sagpanel ,.sag-pnl,.sagg_icerik{
     display: none;
   }
-  .seyahat, .odmscnk, .fytayrnt, .soll{
+  .sagcontact{
+    display: none !important;
+  }
+  .seyahat, .odmscnk, .fytayrnt{
     display: none;
   }
   .buttoncardres{
     background-color: none;
   }
   .seyahatres .odmscnkres, .fytayrntres, .snnloderes, .syhtres, .iptalres, .temelres, .gizlilikres{
-    display: block;
+    display: block !important;
+    
+  }
+  .onay-hr-res{
+    border-width: 7px;
+    color: rgb(164, 162, 162);
   }
   .footeronayres{
     display: block;
     float: left;
+  }
+  .footeronay{
+    display: none;
   }
   .footeronayres .footerssylres{
     display: none;
@@ -1765,8 +1774,15 @@ margin-right: 50px;
   .sagg_icerik{
     display: block;
   } 
+  .contact-sag{
+    display: none;
+  }
 }
+@media screen and (min-width: 744px) {
 .onaynav-res, .sagg_icerikres, .seyahatres, .odmscnkres, .fytayrntres, .snnloderes, .syhtres, .iptalres, .temelres, .gizlilikres, .footeronayres{
+  display: none !important;
+}
+.seyahatres{
   display: none !important;
 }
 .footeronay{
@@ -1774,6 +1790,7 @@ margin-right: 50px;
   align-items: center !important;
   justify-content: center !important;
   flex-direction: column !important;
+}
 }
 
 .bar-search{
