@@ -133,3 +133,5 @@ var slider = document.getElementById("myRange").oninput = function (){
 
 }
 
+
+

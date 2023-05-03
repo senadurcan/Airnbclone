@@ -60,6 +60,15 @@ class Profil(models.Model):
 
     def __str__(self):
         return str(self.isim)
+    
+class Yorum(models.Model):
+   post = models.ForeignKey(Post,related_name='yorum',on_delete=models.CASCADE)
+   yorum = models.TextField(max_length=200,verbose_name='Yorum')
+   new_date = models.DateTimeField(auto_now_add=True)
+   kullanici = models.ForeignKey(User,null=True,on_delete=models.CASCADE)  
+
+   def __str__(self):
+       return self.kullanici.username      
 
 
 

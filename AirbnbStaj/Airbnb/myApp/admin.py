@@ -19,3 +19,4 @@ class ProfilAdmin(admin.ModelAdmin):
 admin.site.register(Kategori , KategoriAdmin)
 admin.site.register(Post , PostAdmin)
 admin.site.register(Profil ,ProfilAdmin )
+admin.site.register(Yorum)

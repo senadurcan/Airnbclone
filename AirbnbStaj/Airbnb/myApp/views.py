@@ -93,9 +93,24 @@ def profil(request):
 
 
 def detay(request , postId):
+    yorumlar = Yorum.objects.all()
     postDetay = Post.objects.get(slug = postId)
+    if 'comment' in request.POST:
+        yorum = request.POST['yorum']
+        yorums=Yorum.objects.create(
+            kullanici = request.user,
+            yorum = yorum,
+            post = postDetay,
+        )
+        yorums.save()
+        messages.success(request,'Yorum yapıldı')
+    if 'sil' in request.POST:
+        yorumId = request.POST['userYorum']
+        yorums = Yorum.objects.get(id = yorumId)
+        yorums.delete()    
     context = {
-        'postDetay' : postDetay
+        'postDetay' : postDetay,
+        'yorumlar':yorumlar,
     }
     return render(request , 'detail.html' ,context)
 
@@ -141,7 +156,6 @@ def postForm(request):
             'kategoriler' :kategoriler,
         }
     return render(request,'postForm.html',context)
-
 
 def hesap(request):
     return render(request , 'hesap/hesap.html')
@@ -207,5 +221,12 @@ def misafir(request):
 
 def contact_host(request):
     return render(request, 'contact_host.html')
+
 def onayödeme(request):
     return render(request, 'onayödeme.html')
+
+def HesapSil(request,id):
+    profile = User.objects.get(id = id)
+    profile.delete()
+    messages.success(request,'Profil silindi') 
+    return render(request,'loginregister.html')

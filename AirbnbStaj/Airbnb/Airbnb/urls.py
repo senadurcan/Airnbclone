@@ -28,4 +28,5 @@ urlpatterns = [
     path('logout/' , logout_request , name="logout"),
     path('contact_host/' ,contact_host , name='contact_host'),
     path('onayödeme/' ,onayödeme , name='onayödeme'),
+    path('delete/<str:id>',HesapSil,name='delete'),
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

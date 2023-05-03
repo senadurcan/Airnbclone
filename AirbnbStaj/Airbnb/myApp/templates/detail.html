@@ -1,6 +1,11 @@
 {% extends 'main.html' %}
 
 {% load static %}
+
+{% block menu %}
+{% include "part/footer.html" %}
+{% endblock menu %}
+
 {% block content  %}
 
 <!-- Navbar -->
@@ -209,26 +214,23 @@
                         </div>
                     </div>
                     <hr>
-                        <img style="object-fit:contain;" class="detail-protection-img" src="{% static 'image/detail-logo.jpg'%}" alt="" width="120px" height="40px">
-                        <div class="mt-2">        
+                    <img style="object-fit:contain;" class="detail-protection-img" src="{% static 'image/detail-logo.jpg'%}" alt="" width="120px" height="40px">
+                    <div class="mt-2">        
                             <small>Her rezervasyon ev sahibi iptallerine, kayıt hatalarına ve girişle ilgili problemler gibi diğer sorunlara karşı ücretsiz olarak koruma altındadır.</small>
-                        </div>
-                        <div class="mt-4">
+                    </div>
+                    <div class="mt-4">
                             <a href=""><small style="text-decoration:underline!important"><b>Daha fazla bilgi edinin</b></small></a>
-                        </div>
-                        <hr>
-
-                            <small>Mylo Villa, Ios Adası'nda tenha bir noktada, adanın en ünlü plajı olan Mylopotas plajına arabayla sadece 2 dakika mesafededir.
-                        
-                                Villa, adını Mylopotas plajından ve sonsuz altın kuma, kristal berraklığındaki sulara sahip Ege'nin en güzel plajlarından birine yakınlığından aldı. Mylopotas plajı AB Mavi Bayrak, canlı plaj barları ile ödüllendirilir, su sporları tesisleri Mylo Villa'daki konaklamanızı tam bir yaz hayali gerçekleştirir.</small>
-                            <div class="mt-4">
+                    </div>
+                    <hr>
+                    <small>Mylo Villa, Ios Adası'nda tenha bir noktada, adanın en ünlü plajı olan Mylopotas plajına arabayla sadece 2 dakika mesafededir.
+                    Villa, adını Mylopotas plajından ve sonsuz altın kuma, kristal berraklığındaki sulara sahip Ege'nin en güzel plajlarından birine yakınlığından aldı. Mylopotas plajı AB Mavi Bayrak, canlı plaj barları ile ödüllendirilir, su sporları tesisleri Mylo Villa'daki konaklamanızı tam bir yaz hayali gerçekleştirir.</small>
+                    <div class="mt-4">
                                 <a href=""><small style="text-decoration:underline!important"><b>Daha fazlasını göster</b></small></a>
                                 <i class="fa-solid fa-angle-right"></i>
-                            </div>
-                            <hr>
-                            <h4>Nerede Uyuyacaksınız?</h4>
-
-                            <div class="d-flex detail-rooms-slider">
+                    </div>
+                    <hr>
+                    <h4>Nerede Uyuyacaksınız?</h4>
+                    <div class="d-flex detail-rooms-slider">
                                 <div class=" m-2 mt-4 d-flex detail-rooms">
                                     <div class="ms-4 detail-rooms-card">
                                         <i class="fa-solid fa-bed"></i>
@@ -257,7 +259,6 @@
                                             <small>1 çift kişilik yatak</small>
                                         </div>
                                     </div>
- 
                                 </div>
                                 <div class=" m-2 mt-4 d-flex detail-rooms">
                                     <div class="detail-rooms-card">
@@ -279,36 +280,36 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="mt-4 detail-house-web">
-                                <h4 >Bu mekan size neler sunuyor?</h4>
-                                    <div class="d-flex mt-4 detail-house-list">
+                    </div>
+                    </div>
+                    <div class="mt-4 detail-house-web">
+                    <h4 >Bu mekan size neler sunuyor?</h4>
+                    <div class="d-flex mt-4 detail-house-list">
                                         <i class=" mt-2 fa-solid fa-utensils fa-lg"></i>
-                                            <p class="ms-3">Mutfak</p>
-                                    </div>
-                                <div class="d-inline-block">
+                                        <p class="ms-3">Mutfak</p>
+                    </div>
+                    <div class="d-inline-block">
                                     <div class=" d-flex mt-2 detail-house-list">
                                         <i class="mt-2 fa-solid fa-wifi fa-lg"></i>
-                                            <p class="ms-3">Wifi</p>
+                                        <p class="ms-3">Wifi</p>
                                     </div>
-                                </div>
-                                    <div class="d-flex mt-2 detail-house-list">
+                    </div>
+                    <div class="d-flex mt-2 detail-house-list">
                                         <i class="mt-2 fa-solid fa-car fa-lg"></i>
-                                            <p class="ms-3">Ücretsiz otopark</p>
-                                    </div>
-                                    <div class="d-flex mt-2 detail-house-list">
-                                        <i class="fa-solid fa-water-ladder fa-flip-horizontal fa-lg" style="margin-top: 10px;"></i>
-                                            <p class="ms-3">Müstakil yüzme havuzu</p>
-                                </div>
-                                <div class="d-flex mt-2 detail-house-list">
+                                        <p class="ms-3">Ücretsiz otopark</p>
+                    </div>
+                    <div class="d-flex mt-2 detail-house-list">
+                                    <i class="fa-solid fa-water-ladder fa-flip-horizontal fa-lg" style="margin-top: 10px;"></i>
+                                    <p class="ms-3">Müstakil yüzme havuzu</p>
+                    </div>
+                    <div class="d-flex mt-2 detail-house-list">
                                     <i class=" mt-2 fa-solid fa-paw fa-lg"></i>
-                                        <p class="ms-3">Evcil hayvan kabul edilir</p>
-                                </div>
-                                </div>
-                                <div>
+                                    <p class="ms-3">Evcil hayvan kabul edilir</p>
+                    </div>
+                    </div>
+                    <div>
                                     <button type="button" class="btn btn-outline-dark">12 olanağın tümünü göster</button>
-                                </div>
+                    </div>
                             </div>
                             <div class="col-4 detail-right">
                                 <div class=" detail-right-card">
@@ -334,7 +335,6 @@
                                         <a class="btn dropdown-toggle" style="width:90%; text-align:left; border: 1px solid #dddddd;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                           <small>Misafir Sayısı</small>
                                         </a>
-                                      
                                         <div class="dropdown-menu" style="width: 310px;">
                                             <div class="ms-3 d-flex justify-content-between">
                                                 <small><b>Yetişkinler</b></small>
@@ -347,7 +347,6 @@
                                                         <i class="ms-3 me-3 fa-solid fa-plus"></i>
                                                     </button>
                                                 </div>
-                                                
                                             </div>
                                             <div class="mb-3 ms-3">
                                                 <small>2-12 yaş</small>
@@ -370,8 +369,8 @@
                                         </div>
                                       </div>
                                       <button class="btn mt-3 detail-airbnb" style="width:90%;">Tarihleri Değiştirin</button>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <hr>
                               <div class="detail-info mt-4 m-4">
@@ -564,169 +563,351 @@
       <hr>
 </div>
 
-<div class="detail-calendar mt-4 m-4">
-    <h4>Paros bölgesinde 6 gece</h4>
-    <small style="color: grey;">17 Nis-22 Nis 2023</small>
-
-    <div class="mt-4" id='main'>
-        <div id='app'></div>
+<div class="container">
+    <h5>Mikonos bölgesinde 5 gece</h5>
+    <small class="lead fs-6">3 May 2023 - 8 May 2023</small>
+    <div class="wrapper">
+        <header class="header__takvim">
+          <p class="current-date"></p>
+          <div class="icons">
+            <span id="prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+              </svg> 
+            </span>
+            <span id="next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+              </svg>
+            </span>
+           </div>
+        </header>
+        <div class="takvim">
+          <ul class="weeks">
+            <li>Pt</li>
+            <li>Sa</li>
+            <li>Ça</li>
+            <li>Pe</li>
+            <li>Cu</li>
+            <li>Ct</li>
+            <li>Pa</li>
+          </ul>
+          <ul class="days"></ul>
         </div>
+        <a href="" style="margin-left: 65%;" class="text-dark text-end">Tarihleri temizle</a>
+    </div>
+    <hr>
 </div>
 
-<div class="mt-4 m-4">
-    <div class="d-flex detail-assessment">
-        <p style="font-size: 20px;">
-            <i class="fa-solid fa-star fa-sm"></i> 5,0 
-            <span> . </span>
-            <u> 7 değerlendirme</u> 
+<div class="container d-flex">
+    <i class="fa-solid fa-star ms-2"></i>
+    <b class="me-2">4,71. Değerlendirme</b>
 </div>
 
-<div class="detail-comment">
-    <div class="slider-container">
-        <div class="slider">
-          <div class="slide">
-            <div class="detail-comment-group">
-                <div style="flex: 0 0 24px;"></div>
-                <div class="detail-comment-card">
-                    <div class="detail-comment-img">
-                        <div class="d-flex">
-                            <img src="{% static 'image/Emre.jpg'%}" alt="photo" width="50px" height="50px" style="border-radius: 30px;">
-                            <div style="margin-left:15px;">
-                                <small>Emre-Sarıgül</small>
-                                <small  style="color: grey; display:block">Haziran 2021</small>
-                            </div>
-                        </div>
-                        <p class="mt-2">Emre çok kibardı! Bizimle orada buluştu, yardımcı oldu ve rahatlıkla giriş yaptık. Harika bir yer cennetten bir köşe gibiydi.</p>
-                    </div>
+<div class="container detail__hidden">
+    <div class="row">
+        <div class="col-6 d-flex justify-content-between">
+            <div class="container me-5 text-start">
+                <ul>
+                    <li>
+                        <p>Temizlik</p>
+                    </li>
+                    <li>
+                        <p>İletişim</p>
+                    </li>
+                    <li>
+                        <p>Giriş</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="container ms-5 text-end">
+                <div class="d-flex">
+                    <div class="range__detail"></div>
+                    <p>4,9</p>
+                </div>
+                <div class="d-flex">
+                    <div class="range__detail"></div>
+                    <p>5.0</p>
+                </div>
+                <div class="d-flex">
+                    <div class="range__detail"></div>
+                    <p>4,9</p>
                 </div>
             </div>
-          </div>
-          <div class="slide">
-            <div class="detail-comment-group">
-                <div style="flex: 0 0 24px;"></div>
-                <div class="detail-comment-card">
-                    <div class="detail-comment-img">
-                        <div class="d-flex">
-                            <img src="{% static 'image/Emre.jpg'%}" alt="photo" width="50px" height="50px" style="border-radius: 30px;">
-                            <div style="margin-left:15px;">
-                                <small>Emre-Sarıgül</small>
-                                <small  style="color: grey; display:block">Haziran 2021</small>
-                            </div>
-                        </div>
-                        <p class="mt-2">Harika bir yer cennetten bir köşe gibiydi.</p>
-                    </div>
+        </div>
+        <div class="col-6 d-flex justify-content-between">
+            <div class="container me-5 text-start">
+                <ul>
+                    <li>
+                        <p>Temizlik</p>
+                    </li>
+                    <li>
+                        <p>İletişim</p>
+                    </li>
+                    <li>
+                        <p>Giriş</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="container ms-5 text-end">
+                <div class="d-flex">
+                    <div class="range__detail"></div>
+                    <p>4,9</p>
+                </div>
+                <div class="d-flex">
+                    <div class="range__detail"></div>
+                    <p>5.0</p>
+                </div>
+                <div class="d-flex">
+                    <div class="range__detail"></div>
+                    <p>4,9</p>
                 </div>
             </div>
-          </div>
-          <div class="slide">
-            <div class="detail-comment-group">
-                <div style="flex: 0 0 24px;"></div>
-                <div class="detail-comment-card">
-                    <div class="detail-comment-img">
-                        <div class="d-flex">
-                            <img src="{% static 'image/Emre.jpg'%}" alt="photo" width="50px" height="50px" style="border-radius: 30px;">
-                            <div style="margin-left:15px;">
-                                <small>Emre-Sarıgül</small>
-                                <small  style="color: grey; display:block">Haziran 2021</small>
-                            </div>
-                        </div>
-                        <p class="mt-2">Emre çok kibardı! Bizimle orada buluştu, yardımcı oldu ve rahatlıkla giriş yaptık.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-xl-6 col-sm-12">
+           {% for yorum in yorumlar %}
+           <div class="container mb-5">
+                <div class="d-flex">
+                    <div>
+                        <img src="{{yorum.kullanici.profil.profilresim.url}}" width="55" height="55" class="rounded-circle">
+                    </div>
+                    <div class="ms-2 mt-1">
+                        <h6>{{yorum.kullanici}}</h6>
+                        <p style="margin-top: -8px;font-size: 13px;">{{yorum.new_date}}</p>
+                    </div>
+                    <div class="mt-2 ms-3">
+                        {% if request.user == yorum.kullanici %}
+                        <form action="" method="POST" class="d-inline">
+                          {% csrf_token %}
+                          <input type="hidden" name="userYorum" value="{{yorum.id}}">
+                          <button type="submit" name="sil" style="background:transparent;border:none;">
+                            <i class="fas fa-trash"></i>
+                          </button>
+                        </form>
+                        {% endif %}
                     </div>
                 </div>
+                <div class="mt-1">
+                    <p>
+                        Maison propre, propriétaires accueillants, sécurité ( portail ect.. ) idéal pour passer des vacances au calme !
+                    </p>
+                </div>
             </div>
-          </div>
-          <!-- Diğer yorumlar --> 
-      </div>
+           {% endfor %}
+        </div> 
+        <div class="col-xl-6 col-sm-12">
+            <div class="container mb-5">
+                 <div class="d-flex">
+                     <div>
+                         <img src="{% static 'image/detail-img-2.jpg' %}" width="55" height="55" class="rounded-circle">
+                     </div>
+                     <div class="ms-2 mt-1">
+                         <h6>Cedric</h6>
+                         <p style="margin-top: -8px;font-size: 13px;">Eylül 2022</p>
+                     </div>
+                 </div>
+                 <div class="mt-1">
+                     <p>
+                         Maison propre, propriétaires accueillants, sécurité ( portail ect.. ) idéal pour passer des vacances au calme !
+                     </p>
+                 </div>
+            </div>
+            <div class="container mt-5">
+             <div class="d-flex">
+                 <div>
+                     <img src="{% static 'image/detail-img-2.jpg' %}" width="55" height="55" class="rounded-circle">
+                 </div>
+                 <div class="ms-2 mt-1">
+                     <h6>Cedric</h6>
+                     <p style="margin-top: -8px;font-size: 13px;">Eylül 2022</p>
+                 </div>
+             </div>
+             <div class="mt-1">
+                 <p>
+                     Maison propre, propriétaires accueillants, sécurité ( portail ect.. ) idéal pour passer des vacances au calme !
+                 </p>
+             </div>
+            </div>
+            <div class="container mt-5">
+                 <div class="d-flex">
+                     <div>
+                         <img src="{% static 'image/detail-img-2.jpg' %}" width="55" height="55" class="rounded-circle">
+                     </div>
+                     <div class="ms-2 mt-1">
+                         <h6>Cedric</h6>
+                         <p style="margin-top: -8px;font-size: 13px;">Eylül 2022</p>
+                     </div>
+                 </div>
+                 <div class="mt-1">
+                     <p>
+                         Maison propre, propriétaires accueillants, sécurité ( portail ect.. ) idéal pour passer des vacances au calme !
+                     </p>
+                 </div>
+            </div>
+         </div> 
     </div>
-      <a class="arrow-right" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="arrow-left" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+    <button class="btn btn-outline-dark mb-2 mt-2 py-2">Bütün Değerlendirmeleri Göster</button>
+    <hr class="mt-5 mb-5">
+</div>
 
+<div class="container">
+    <h3 class="mb-4 mt-2">Bu eve bir yorum yap</h3>
+    <div class="d-flex ">
+        <div class="justify-content-start w-50">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Kullanıcı adınız</label>
+                    <input type="text" class="form-control" name="kullanici" id="exampleFormControlInput1" placeholder="Kullanıcı Adınız">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Yorumunuz</label>
+                    <textarea class="form-control" name="yorum" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" name="comment" class="btn btn-dark mb-4">Yorum Yap</button>
+            </form>
+        </div>
+    </div>
+</div>
 
-    <div class="mt-4" style="text-align: center;">
-        <button type="button" class="btn btn-outline-dark">12 olanağın tümünü göster</button>
+<div class="container detail__hidden mb-3">
+    <h4 class="text-start">Nerede olacaksınız?</h4>
+    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48192.21068375024!2d29.028033431898063!3d40.981192498440144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac790b17ba89d%3A0xd2d24ea0437a7ee2!2zS2FkxLFrw7Z5L8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1652652989141!5m2!1str!2str" width="100%" height="500vh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <div class="mt-4">
+    <h6>Mikonos, NY, Yunanistan</h6>
+    <p class="hesap__p">A Short 15 min walk or 4 min Drive to Panormo Beach and PrincePote Beach Club. The view from our property is unhindered and gazes at one of the best beaches of Mykonos, where you can have a good time until late, at the three beautiful Bars and Restaurants.</p>
+    <a href="" class="text-dark">Daha fazlasını göster</a>
+   </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-5 col-sm-12">
+            <div class="container mt-5">
+                <div class="d-flex">
+                    <div>
+                        <img src="{% static 'image/detail-img-2.jpg' %}" width="55" height="55" class="rounded-circle">
+                    </div>
+                    <div class="ms-2 mt-1">
+                        <h6>Cedric</h6>
+                        <p style="margin-top: -8px;font-size: 13px;">Eylül 2022</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="d-inline">175 değerlendirme</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-shield-check"></i>
+                    <p class="d-inline">Kimlik doğrulandı</p>
+                </div>
+                <div class="mt-4">
+                    <p>We offer you a choice of 3 distinctive villas around the globe: Wahyu Villa in Bali, Indonesia, Villa Mylo in Ios, Greece and Infiniti Villa in Saint Barthélemy. All villas are <br> <a href="" class="text-dark">Devamını okuyun</a></p>
+                </div>
+           </div>
+        </div>
+        <div class="col-xl-7 col-sm-12">
+           <div class="container" style="margin-top: 15%;">
+                <p class="mt-2">Poliçe numarası: 01156880820</p>
+                <p class="mt-2">Dil: English, Français</p>
+                <p class="mt-2">Yanıt oranı: 100%</p>
+                <p class="mt-2">Yanıt süresi: bir saat içinde</p>
+           </div>
+           <button class="btn btn-dark ms-2 py-2">Ev sahibi ile iletişime geçin</button>
+           <div class="d-flex mt-3">
+                <i class="fa-solid fa-shield mt-4" style="color: #ff007b;"></i>
+                <p class="ms-2" style="font-size: 12px;">Ödeme güvenliği açısından asla Airbnb web <br> sitesi veya uygulaması dışında para havalesi <br> yapmayın ve iletişime girmeyin.</p>
+           </div>
+        </div>
     </div>
     <hr>
 </div>
 
-
-
-<div class="detail-homeowner-res mt-4 m-2">
-        <div class="row detail-profil">
-            <div class="col-6" >
-                <h4>Ev sahibi: Emre</h4>
-            </div>
-            <div class="col-6" style="text-align: right;">
-                <img src="{% static 'image/Emre.jpg'%}" alt="photo" width="50px" height="50px" style="border-radius: 30px;">
-            </div>
+<div class="container mt-5">
+    <h3 class="mb-5">Bilinmesi Gerekenler</h3>
+    <div class="row mt-2">
+        <div class="col-4">
+            <p>Ev kuralları</p>
+            <p>En erken giriş saati: 15.00</p>
+            <p>En geç çıkış saati: 10.00</p>
+            <p>Maksimum 5 misafir</p>
+            <a href="" class="text-dark">Daha fazlasını göster</a>
         </div>
-        <small style="color: grey;">Haziran 2021 tarihinde katıldı.</small>
-        <div class=" mt-4 fa-stars">
-            <i class="fa-solid fa-star"></i>
-            <small style="margin-left: 10px;"> 15 değerlendirme</small>
-            <i class="fa-solid fa-shield-check"></i>
+        <div class="col-4">
+            <p>Güvenlik ve mekân</p>
+            <p>Karbonmonoksit alarmı yok</p>
+            <p>Duman alarmı yok</p>
+            <p>Kapısı veya kilidi olmayan havuz/jakuzi</p>
+            <a href="" class="text-dark">Daha fazlasını göster</a>
         </div>
-        <div class=" mt-2 ">
-            <i class="fa-sharp fa-solid fa-circle-check"></i>      
-            <small style="margin-left: 10px;"> Kimlik doğrulandı</small>
+        <div class="col-4">
+            <p>İptal politikası</p>
+            <p>Ücretsiz iptal için son gün 5 May.</p>
+            <p>Ev sahibinin, COVID-19 kaynaklı hastalık veya aksaklıklar nedeniyle iptal etseniz bile geçerli olan tam iptal politikasını inceleyin.</p>
+            <a href="" class="text-dark">Daha fazlasını göster</a>
         </div>
-        <div class="mt-4">
-            <small>poliçe numarası: 1503209</small>
-        </div>
-        <div>
-            <small>Dil: English</small>
-        </div>
-        <div>
-            <small>Yanıt oranı: 92%</small>
-        </div>
-        <div>
-            <small>Yanıt süresi birkaç saat içinde</small>
-        </div>
-        <div class="mt-4" style="text-align: center;">
-            <button type="button" class="btn btn-outline-dark">Ev sahibiyle iletişime geçin</button>
-        </div>
-        <div class="mt-2">
-            <small style="font-size: 10px;">Ödeme güvenliği açısından asla Airbnb web sitesi veya uygulaması dışında para havalesi yapmayın ve iletişime girmeyin.</small>
-        </div>
-        <hr>
     </div>
-
-    <div class=" mt-4 mb-2 detail-cancel">
-        <h4>İptal Politikası</h4>
-        <small style="color: grey;">Ücretsiz iptal için son gün 14 Nisan</small>
-    </div>
-    <small style="color: grey;">Ev sahibinin, COVID-19 kaynaklı hastalık veya aksaklıklar nedeniyle iptal etseniz bile geçerli olan tam iptal polikitasını inceleyin.</small>
-    <hr>
-    <div class="mt-4 ">
-        <h4>Ev kuralları</h4>
-        <small style="color: grey;">En erken giriş saati: 15.00</small>
-    </div>
-    <div class="mt-2">
-        <small style="color: grey;">En erken çıkış saati: 11.00</small>
-    </div>
-    <div class="mt-2">
-        <small style="color: grey;">Maksimum 2 misafir</small>
-    </div>
-    <p class="mt-2" style="text-decoration:underline!important">Daha fazlasını göster</p>
-    <hr>
-
-    <div class=" mt-4 mb-2 detail-cancel">
-        <h4>Güvenlik ve mekan</h4>
-        <small style="color: grey;">karbonmonoksit alarmı yok</small>
-    </div>
-    <small style="color: grey;">Müstakil havuz / jakuzi</small>
-    <div>
-        <small style="color: grey;">Yakında göl,nehir veya diğer su kütleleri</small>
-    </div>
-    <p class="mt-2" style="text-decoration:underline!important">Daha fazlasını göster</p>
-    <hr>
-</div>
 </div>
 
+<div style="height: 150px;"></div>
+
+<script>
+    // TAKVİM
+
+const daysTag = document.querySelector(".days");
+const currentDate = document.querySelector(".current-date");
+const prevNextIcon = document.querySelectorAll(".icons span");
+
+let currYear = new Date().getFullYear();
+let currMonth = new Date().getMonth();
+
+const months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+
+const renderCalendar = () => {
+    const date = new Date(currYear, currMonth, 1);
+    let firstDayofMonth = date.getDay();
+    let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
+    let lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay();
+    let lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
+
+    let liTag = "";
+
+    for (let i = firstDayofMonth; i > 0; i--) {
+        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+    }
+
+    for (let i = 1; i <= lastDateofMonth; i++) {
+        let isToday = i === new Date().getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear() ? "active" : "";
+        liTag += `<li class="${isToday}">${i}</li>`;
+    }
+
+    for (let i = lastDayofMonth; i < 6; i++) {
+        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
+    }
+
+    currentDate.innerText = `${months[currMonth]} ${currYear}`;
+    daysTag.innerHTML = liTag;
+};
+
+renderCalendar();
+
+prevNextIcon.forEach(icon => {
+    icon.addEventListener("click", () => {
+        currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+
+        if (currMonth < 0 || currMonth > 11) {
+            currYear = icon.id === "prev" ? currYear - 1 : currYear + 1;
+            currMonth = currMonth < 0 ? 11 : 0;
+        }
+
+        renderCalendar();
+    });
+});
+</script>
 
 {% endblock content %}
