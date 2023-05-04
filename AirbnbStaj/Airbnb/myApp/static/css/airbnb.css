@@ -1711,7 +1711,7 @@ margin-right: 50px;
   }
 }
 @media screen  and (max-width:744px) {
-  .onayödemenav,.geriikon, .onaybaslik, .sagpanel ,.sag-pnl,.sagg_icerik{
+  .onayödemenav,.geriikon, .onaybaslik, .sagpanel ,.sag-pnl,.sagg_icerik, .onay-mainrow{
     display: none;
   }
   .sagcontact{
@@ -1741,7 +1741,27 @@ margin-right: 50px;
   .footeronayres .footerssylres{
     display: none;
   }
-
+  .footerrescontact{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    border: black;
+    border-width: 5px;
+    margin-top: 50px;
+    
+  }
+ 
+  .contactbutton{
+    width: 259px;
+    text-align: center;
+    border-radius: 8px;
+    margin-right: 35px;
+  }
   .modal-dialogres {
     position:fixed;
     top:auto;

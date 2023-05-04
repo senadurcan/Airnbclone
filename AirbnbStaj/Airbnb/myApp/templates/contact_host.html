@@ -5,7 +5,7 @@
 {% block content %}
 <header class="main-header d-sm-none d-lg-block">
     <div class="mt-3 align-self-center ">
-        <div class="main-container">
+        <div class="main-container" style="bottom: 150px;">
             <div class="d-flex align-items-center justify-content-between main-navbar">
                     <a href="/">
                         <img src="{% static 'image/airbnb.png' %}" width="90px" alt="">
@@ -49,11 +49,11 @@
     </div>
     <hr class="navczg w-100">
 </header>
-<div class="container contact">
+<div class="container-fluid p-4 contact">
    
-    <div class="geriikon mt-4">
+    <div class="geriikon-contact w-100 h-50 mt-2 col-sm-12">
         <a href="/">
-            <i class="fa-solid fa-angle-left fa-2xl mb-5 text-dark "></i>
+            <i class="fa-solid fa-angle-left fa-2xl mb-3 text-dark "></i>
         </a>
     </div>
     <div class="row">
@@ -75,18 +75,31 @@
                     <li class="fw-light"><i class="fa-solid fa-circle-small fa-2xs" style="color: #000000;"></i>Parti veya etkinlik düzenlenemez. Evcil hayvan kabul edilmez.</li>
                 </ul>
             </div>
+            <div>
             <p class="fw-medium mt-4">Fiyat ve uygunluk</p>
-            <div class="">
                 <ul>
                     <li class="fw-light"><i class="fa-solid fa-circle-small fa-2xs" style="color: #000000;"></i>Bir haftadan daha uzun konaklamalarda 6% haftalık indirim veya bir aydan daha uzun konaklamalarda 20% aylık indirim kazanın.</li>
                     <li class="fw-light"><i class="fa-solid fa-circle-small fa-2xs" style="color: #000000;"></i>Baris adlı ev sahibinin evi 1 – 6 May arasında uygun durumda. Kısa süre içinde rezervasyon yapın.</li>
                     <li class="fw-light"><i class="fa-solid fa-circle-small fa-2xs" style="color: #000000;"></i>Sınırlı süre içinde tam para iadesi.</li>
+
                 </ul>
+                
+            
+            <div class="d-sm-block d-flex mb-5">
+                <p>Bu ev 17-22 Haz tarihleri arasında uygun.<a class="text-dark fw-medium" href="{% url 'onayödeme' %}">Rezervasyon yap</a>
+                </p>
             </div>
-            <hr class="text-secondary mt-4">
-            <h1 class="fs-5 mt-4">Başka sorularınız mı var? Ev sahibine mesaj gönderin</h1>
-            <textarea class="textarea mt-3 w-100" rows="6" cols="90"></textarea>            
-            <button class="mesajj mt-3 mb-3">Mesaj Gönder</button>
+            <div><hr> </div>
+            </div>
+
+
+
+            <div class="d-sm-none">
+                <hr class="text-secondary mt-4">
+                <h1 class="fs-5 mt-4">Başka sorularınız mı var? Ev sahibine mesaj gönderin</h1>
+                <textarea class="textarea mt-3 w-100" rows="6" cols="90"></textarea>            
+                <button class="mesajj mt-3 mb-3 d-sm-none">Mesaj Gönder</button>
+            </div>
         </div>
         <div class="col-4   sagcontact ">
             <div class="sagg ">
@@ -123,8 +136,18 @@
             </div>
         </div>
     </div>
-</div>
+    <div class="">
+      
+        <div class="footerrescontact d-flex">
+            <p class="mt-4 fw-light">Hala sorunuz mu var?</p>
+            <b style="background-color: #000000; " class="contactbutton text-light fw-medium p-2">Ev sahibine mesaj gönderin</b>
+        </div>
 
+   
+    </div>
+    
+    
+</div>
 
 {% endblock content %}
 
